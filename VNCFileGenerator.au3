@@ -1,16 +1,16 @@
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
-#AutoIt3Wrapper_Icon=favicon-2.ico
+#AutoIt3Wrapper_Icon=favicon-2.ico4
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #cs ----------------------------------------------------------------------------
 
 	AutoIt Version: 3.3.16.0
-	Author:         Tomasz Krzymianowski
+	Author: Tomasz Krzymianowski
 
 	Script Function:
 		Generating VNC cnnection files in specific location.
 
 	Parameters:
-		\path:""  ;Create VNC files in this path
+		\path:"" ;Create VNC files in this path
 
 #ce ----------------------------------------------------------------------------
 
@@ -87,7 +87,7 @@ EndFunc   ;==>_main
 Func _CreateVNCFile($vIP, $targetDir = $gFilePath)
 	Local $userName = @UserName & "(" & @ComputerName & ")(" & $vIP & ")"
 
-	_log('Creatinv VNC File for: ' & $vIP & @CRLF, 2)
+	_log('Creating VNC File for: ' & $vIP & @CRLF, 2)
 
 	Local $fileName = "\" & $userName & ".vnc"
 	Local $file = FileOpen($targetDir & $fileName, 2)
@@ -186,3 +186,4 @@ Func _log($value, $indent = 0, $filePath = $gLogPath)
 	;Print log in console
 	ConsoleWrite($value & @CRLF)
 EndFunc   ;==>_log
+
